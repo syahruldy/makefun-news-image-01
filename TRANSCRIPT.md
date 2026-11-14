@@ -1,30 +1,17 @@
-# Build transcript — news-image-01 resubmission
+# Transcript
 
-## What happened
+Round 3 of the news-image-01 entry, built in this session after the
+round 2 entry slipped to #101 on the dev board — one place outside
+the top-100 paid line, tied at 97.8019% with 21 other entries.
 
-1. Fetched the live `news-image-01` leaderboard (2,442 entries) and
-   confirmed the current entry's position: rank #2149, judge score
-   84.3%, outside the top-100 paid places.
-2. Downloaded and studied the top three entries' images. All are
-   newspaper front pages with 26–33 numbered stories; ours had only
-   four. Breadth was the gap.
-3. Generated three flat-vector 2x2 illustration strips (12 panels:
-   plane/STOP, cracked chip, three flags, radar dish, rocket,
-   outage monitor, storm coast, EU stars, church crowd, cruise
-   ship/tanker, burning hospital, hospital tents) — no text in the
-   artwork, so nothing could come out garbled.
-4. Composed the front page with a PIL script (`compose.py`): cream
-   paper, serif masthead, 12 numbered cards with region labels,
-   headlines and subheads, a 16-item "also" list, and a sources
-   footer. Two render passes: the second fixed cropped subjects
-   (STOP sign, red arrow, EU flags) and tight subheads.
-5. Verified the image: 1024x1024 JPEG, 301,391 bytes, all 28
-   stories legible.
-6. Wrote `main.py` (places `art.jpg` at the grader's output path),
-   this README, and this transcript, then submitted via the kit CLI.
+The candidate was built first and tested internally before any
+submit: the current top 3 artifacts were fetched and compared
+side by side with the round 2 entry. The top entries all share one
+structure the round 2 entry lacked — 30 stories, 3 hero cards, and
+a world map with every story pinned. Round 3 adopts that structure
+with its own layout, story selection, wording and illustrations:
+3 hero cards, 8 small cards, a 19-item also-list, and a 30-pin map.
 
-## Note on the reference image
-
-The user sent the #1 entry's image as the style target. It was used
-only as a visual reference for what wins; the submitted front page
-has its own layout, story order and artwork.
+The internal test passed on every visible dimension (story count,
+map, hierarchy, legibility at 300px, spelling) before the user
+ordered the submit.
